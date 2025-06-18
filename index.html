@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Кофейня Aroma</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#fdfaf6] text-[#3b2f2f] font-sans">
+
+  <!-- Hero Section -->
+  <section class="bg-[url('https://images.unsplash.com/photo-1509042239860-f550ce710b93')] bg-cover bg-center text-white h-screen flex items-center justify-center relative">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="z-10 text-center px-4">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">Кофейня “Aroma”</h1>
+      <p class="text-xl mb-6">Твое место уюта, вдохновения и свежего кофе</p>
+      <a href="#menu" class="bg-white text-brown-800 px-6 py-3 rounded-full font-semibold shadow hover:bg-gray-200 transition">Посмотреть меню</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-10">Почему выбирают нас</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/8b5e3c/coffee.png" class="mx-auto mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Авторский кофе</h3>
+        <p>Мы обжариваем зёрна сами и готовим по уникальным рецептам</p>
+      </div>
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/8b5e3c/relax.png" class="mx-auto mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Уютная атмосфера</h3>
+        <p>Идеально для работы, встреч и уединённого отдыха</p>
+      </div>
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/8b5e3c/barista.png" class="mx-auto mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Профессиональные бариста</h3>
+        <p>Наши мастера знают, как пробудить твои вкусовые рецепторы</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery / Menu Section -->
+  <section id="menu" class="py-20 bg-[#fff8f0] px-6">
+    <h2 class="text-3xl font-bold text-center mb-12">Популярные напитки</h2>
+    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Латте" class="rounded-lg mb-4">
+        <h3 class="text-xl font-semibold mb-2">Карамельный латте</h3>
+        <p class="text-gray-600">Нежный вкус с нотками карамели и молочной пены</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="Капучино" class="rounded-lg mb-4">
+        <h3 class="text-xl font-semibold mb-2">Капучино</h3>
+        <p class="text-gray-600">Классика в идеальном исполнении</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://images.unsplash.com/photo-1528701800489-20be7f6f8b8d" alt="Раф" class="rounded-lg mb-4">
+        <h3 class="text-xl font-semibold mb-2">Ванильный раф</h3>
+        <p class="text-gray-600">Сливочный кофе с нежным ароматом ванили</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="py-20 px-6">
+    <h2 class="text-3xl font-bold text-center mb-12">Отзывы гостей</h2>
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+      <div class="bg-white p-6 rounded-xl shadow">
+        <p>"Уютнейшее место в городе! Обожаю их латте и атмосферу."</p>
+        <span class="block mt-4 font-semibold">— Мария С.</span>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <p>"Бариста знают своё дело. Каждый визит — как маленький праздник."</p>
+        <span class="block mt-4 font-semibold">— Иван П.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-[#fff1e6] py-20 px-6">
+    <h2 class="text-3xl font-bold text-center mb-8">Связаться с нами</h2>
+    <form class="max-w-xl mx-auto space-y-4">
+      <input type="text" placeholder="Ваше имя" class="w-full p-3 border border-gray-300 rounded-lg" required />
+      <input type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded-lg" required />
+      <textarea rows="4" placeholder="Сообщение" class="w-full p-3 border border-gray-300 rounded-lg" required></textarea>
+      <button type="submit" class="bg-[#8b5e3c] text-white px-6 py-3 rounded-full hover:bg-[#6d442b] transition">Отправить</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#3b2f2f] text-white text-center py-6">
+    <p>&copy; 2025 Кофейня “Aroma”. Все права защищены.</p>
+  </footer>
+
+</body>
+</html>
