@@ -2,96 +2,151 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Кофейня Aroma</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#fdfaf6] text-[#3b2f2f] font-sans">
+<body class="bg-gradient-to-b from-[#f7f1e1] to-[#fdfaf6] text-[#3b2f2f] font-sans leading-relaxed">
 
-  <!-- Hero Section -->
-  <section class="bg-[url('https://images.unsplash.com/photo-1509042239860-f550ce710b93')] bg-cover bg-center text-white h-screen flex items-center justify-center relative">
-    <div class="absolute inset-0 bg-black/50"></div>
-    <div class="z-10 text-center px-4">
-      <h1 class="text-5xl md:text-6xl font-bold mb-4">Кофейня “Aroma”</h1>
-      <p class="text-xl mb-6">Твое место уюта, вдохновения и свежего кофе</p>
-      <a href="#menu" class="bg-white text-brown-800 px-6 py-3 rounded-full font-semibold shadow hover:bg-gray-200 transition">Посмотреть меню</a>
+  <!-- Navigation -->
+  <nav class="fixed w-full z-20 backdrop-blur bg-white/30 shadow-md">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+      <a href="#" class="text-2xl font-bold">Aroma</a>
+      <ul class="hidden md:flex space-x-8">
+        <li><a href="#menu" class="hover:text-[#8b5e3c] transition">Меню</a></li>
+        <li><a href="#features" class="hover:text-[#8b5e3c] transition">Преимущества</a></li>
+        <li><a href="#gallery" class="hover:text-[#8b5e3c] transition">Галерея</a></li>
+        <li><a href="#contact" class="hover:text-[#8b5e3c] transition">Контакты</a></li>
+      </ul>
+      <button class="md:hidden p-2 focus:outline-none" onclick="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-white/70 backdrop-blur">
+      <ul class="flex flex-col p-4 space-y-4">
+        <li><a href="#menu" class="hover:text-[#8b5e3c] transition">Меню</a></li>
+        <li><a href="#features" class="hover:text-[#8b5e3c] transition">Преимущества</a></li>
+        <li><a href="#gallery" class="hover:text-[#8b5e3c] transition">Галерея</a></li>
+        <li><a href="#contact" class="hover:text-[#8b5e3c] transition">Контакты</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="h-screen flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1509042239860-f550ce710b93')] bg-cover bg-center relative">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="relative z-10 text-center text-white px-4">
+      <h1 class="text-6xl md:text-7xl font-extrabold mb-4 drop-shadow-lg">Кофейня <span class="text-[#e2b07e]">Aroma</span></h1>
+      <p class="text-xl md:text-2xl mb-6 drop-shadow">Твое уютное пространство для вдохновения и идеального капучино</p>
+      <a href="#menu" class="inline-block bg-[#e2b07e] text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition">Узнать меню</a>
+    </div>
+  </header>
+
+  <!-- Features -->
+  <section id="features" class="py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center mb-12">
+      <h2 class="text-4xl font-bold">Почему Aroma?</h2>
+      <p class="mt-4 text-gray-600">Наша философия: качество, тепло и креативность в каждой чашке.</p>
+    </div>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+      <div class="flex flex-col items-center text-center space-y-4">
+        <img src="https://img.icons8.com/?size=50&id=CU7uQBPFjlhJ" class="animate-pulse"/>
+        <h3 class="text-2xl font-semibold">Свежеобжаренные зёрна</h3>
+        <p class="text-gray-600">Обжариваем вручную каждое утро, чтобы вы насладились богатым ароматом.</p>
+      </div>
+      <div class="flex flex-col items-center text-center space-y-4">
+        <img src="https://img.icons8.com/?size=80&id=y9SVJqizglic" alt="Бариста" class="animate-bounce"/>
+        <h3 class="text-2xl font-semibold">Мастерство бариста</h3>
+        <p class="text-gray-600">Наши специалисты создают для вас настоящие шедевры.</p>
+      </div>
+      <div class="flex flex-col items-center text-center space-y-4">
+        <img src="https://img.icons8.com/ios-filled/60/8b5e3c/cupcake.png" alt="Десерты" class="animate-spin"/>
+        <h3 class="text-2xl font-semibold">Аутентичные десерты</h3>
+        <p class="text-gray-600">Авторские сладости, идеально дополняющие ваш напиток.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section class="py-20 px-6 text-center">
-    <h2 class="text-3xl font-bold mb-10">Почему выбирают нас</h2>
-    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <div>
-        <img src="https://img.icons8.com/ios-filled/50/8b5e3c/coffee.png" class="mx-auto mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Авторский кофе</h3>
-        <p>Мы обжариваем зёрна сами и готовим по уникальным рецептам</p>
+  <!-- Menu Gallery -->
+  <section id="menu" class="py-20 px-6 bg-[#fff8f0]">
+    <div class="max-w-4xl mx-auto text-center mb-12">
+      <h2 class="text-4xl font-bold">Наше меню</h2>
+      <p class="mt-4 text-gray-600">Выбор лучших напитков для любого настроения.</p>
+    </div>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+      <!-- Caramel Latte -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Карамельный латте" class="w-full h-56 object-cover" />
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Карамельный латте</h3>
+          <p class="text-gray-600 mb-4">Нежность карамели и бархатная молочная пена.</p>
+          <span class="text-[#3b2f2f] font-bold">₽350</span>
+        </div>
       </div>
-      <div>
-        <img src="https://img.icons8.com/ios-filled/50/8b5e3c/relax.png" class="mx-auto mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Уютная атмосфера</h3>
-        <p>Идеально для работы, встреч и уединённого отдыха</p>
+      <!-- Cappuccino -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition">
+        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772" alt="Капучино" class="w-full h-56 object-cover" />
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Капучино</h3>
+          <p class="text-gray-600 mb-4">Классика кофейной элегантности.</p>
+          <span class="text-[#3b2f2f] font-bold">₽300</span>
+        </div>
       </div>
-      <div>
-        <img src="https://img.icons8.com/ios-filled/50/8b5e3c/barista.png" class="mx-auto mb-4" />
-        <h3 class="text-xl font-semibold mb-2">Профессиональные бариста</h3>
-        <p>Наши мастера знают, как пробудить твои вкусовые рецепторы</p>
+      <!-- Vanilla Raf -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition">
+        <img src="https://media.istockphoto.com/id/1431048505/photo/raf-coffee-with-raspberry-on-cup-on-grey-table.webp?a=1&b=1&s=612x612&w=0&k=20&c=uj6q03zFZ4VZ7Qss8Dh72sgafb_P7dIAF8OAmkIBhZ8=" alt="Ванильный раф" class="w-full h-56 object-cover" />
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2">Ванильный раф</h3>
+          <p class="text-gray-600 mb-4">Сливочный вкус и аромат ванили.</p>
+          <span class="text-[#3b2f2f] font-bold">₽380</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Gallery / Menu Section -->
-  <section id="menu" class="py-20 bg-[#fff8f0] px-6">
-    <h2 class="text-3xl font-bold text-center mb-12">Популярные напитки</h2>
-    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Латте" class="rounded-lg mb-4">
-        <h3 class="text-xl font-semibold mb-2">Карамельный латте</h3>
-        <p class="text-gray-600">Нежный вкус с нотками карамели и молочной пены</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="Капучино" class="rounded-lg mb-4">
-        <h3 class="text-xl font-semibold mb-2">Капучино</h3>
-        <p class="text-gray-600">Классика в идеальном исполнении</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-        <img src="https://images.unsplash.com/photo-1528701800489-20be7f6f8b8d" alt="Раф" class="rounded-lg mb-4">
-        <h3 class="text-xl font-semibold mb-2">Ванильный раф</h3>
-        <p class="text-gray-600">Сливочный кофе с нежным ароматом ванили</p>
-      </div>
+  <!-- Gallery -->
+  <section id="gallery" class="py-20 px-6">
+    <div class="max-w-4xl mx-auto text-center mb-12">
+      <h2 class="text-4xl font-bold">Галерея</h2>
+      <p class="mt-4 text-gray-600">Моменты из жизни Aroma</p>
     </div>
-  </section>
-
-  <!-- Reviews -->
-  <section class="py-20 px-6">
-    <h2 class="text-3xl font-bold text-center mb-12">Отзывы гостей</h2>
-    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-      <div class="bg-white p-6 rounded-xl shadow">
-        <p>"Уютнейшее место в городе! Обожаю их латте и атмосферу."</p>
-        <span class="block mt-4 font-semibold">— Мария С.</span>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow">
-        <p>"Бариста знают своё дело. Каждый визит — как маленький праздник."</p>
-        <span class="block mt-4 font-semibold">— Иван П.</span>
-      </div>
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Ароматный эспрессо" class="rounded-lg object-cover h-40 w-full" />
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" alt="Подача капучино" class="rounded-lg object-cover h-40 w-full" />
+      <img src="https://images.unsplash.com/photo-1532713107108-dfb5d8d2fc42?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Бариста готовит кофе" class="rounded-lg object-cover h-40 w-full" />
+      <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62" alt="Уютный интерьер" class="rounded-lg object-cover h-40 w-full" />
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="bg-[#fff1e6] py-20 px-6">
-    <h2 class="text-3xl font-bold text-center mb-8">Связаться с нами</h2>
+  <section id="contact" class="py-20 px-6 bg-[#fff1e6]">
+    <div class="max-w-4xl mx-auto text-center mb-8">
+      <h2 class="text-4xl font-bold">Связаться с нами</h2>
+      <p class="mt-2 text-gray-600">Мы всегда рады обратной связи!</p>
+    </div>
     <form class="max-w-xl mx-auto space-y-4">
-      <input type="text" placeholder="Ваше имя" class="w-full p-3 border border-gray-300 rounded-lg" required />
-      <input type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded-lg" required />
-      <textarea rows="4" placeholder="Сообщение" class="w-full p-3 border border-gray-300 rounded-lg" required></textarea>
-      <button type="submit" class="bg-[#8b5e3c] text-white px-6 py-3 rounded-full hover:bg-[#6d442b] transition">Отправить</button>
+      <div class="grid md:grid-cols-2 gap-4">
+        <input type="text" placeholder="Ваше имя" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-[#8b5e3c] focus:ring-1 focus:ring-[#8b5e3c]" required />
+        <input type="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-[#8b5e3c] focus:ring-1 focus:ring-[#8b5e3c]" required />
+      </div>
+      <textarea rows="4" placeholder="Сообщение" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-[#8b5e3c] focus:ring-1 focus:ring-[#8b5e3c]" required></textarea>
+      <button type="submit" class="block mx-auto bg-[#8b5e3c] text-white px-10 py-3 rounded-full font-semibold hover:bg-[#6d442b] transform hover:scale-105 transition">Отправить</button>
     </form>
   </section>
 
   <!-- Footer -->
   <footer class="bg-[#3b2f2f] text-white text-center py-6">
-    <p>&copy; 2025 Кофейня “Aroma”. Все права защищены.</p>
+    <p>&copy; 2025 Кофейня Aroma. Все права защищены.</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
 
 </body>
 </html>
